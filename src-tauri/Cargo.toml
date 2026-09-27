@@ -1,0 +1,21 @@
+[package]
+name = "modeldock"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+dock-core = { path = "../crates/dock-core" }
+# custom-protocol: serve the built ../dist from the embedded custom protocol
+# (release-mode behavior). Without it, tauri::is_dev() == true and the webview
+# loads devUrl (localhost:5173) even in a `cargo build --release` binary.
+tauri = { version = "2", features = ["custom-protocol"] }
+tauri-plugin-single-instance = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "time"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }

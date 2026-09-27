@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = ["crates/dock-core", "src-tauri"]
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+lto = "thin"
+strip = true

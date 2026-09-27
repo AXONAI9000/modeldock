@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "ModelDock",
+  "version": "0.1.0",
+  "identifier": "com.local.modeldock",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "ModelDock",
+        "width": 1240,
+        "height": 800,
+        "minWidth": 1000,
+        "minHeight": 640,
+        "backgroundColor": "#fafafa"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false
+  }
+}
