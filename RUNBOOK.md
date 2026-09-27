@@ -81,7 +81,8 @@ curl.exe -s --max-time 5 http://127.0.0.1:8080/health   # {"status":"ok"}
 
 | 项 | 值 |
 |---|---|
-| 工作区 | `D:\setup\codeProject\modeldock`（crate：`crates/dock-core`、`src-tauri`） |
+| 工作区 | `D:\setup\codeProject\modeldock`（crate：`crates/dock-core`、`src-tauri`；2026-09-27 由 `begin` 改名而来） |
+| Git | MinGit（不在 PATH）：`D:\setup\tools\git\cmd\git.exe`；仓库 `D:\setup\codeProject\modeldock`，remote `origin` → `https://github.com/AXONAI9000/modeldock`（public）。提交：`git add -A && git commit -m "..." && git push origin main`（推送需临时 PAT：助手脚本 `D:\setup\tools\gh-make-token.ps1` / `cdp-eval.ps1`，现建即删） |
 | Rust 工具链 | GNU `stable-x86_64-pc-windows-gnu`（rustc 1.98.1）@ `D:\setup\tools\rustup` |
 | cargo registry | `D:\setup\tools\cargo` |
 | mingw binutils（dlltool/windres 运行时） | `D:\setup\tools\mingw64\mingw64\bin`（MSYS2 包，无安装器） |
